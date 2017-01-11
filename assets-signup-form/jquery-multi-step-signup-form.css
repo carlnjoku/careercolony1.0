@@ -1,0 +1,161 @@
+
+#multistepform .bg {
+   
+}
+#multistepform .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 10000;
+}
+#multistepform-container {
+	max-width: 800px;
+    top:50px;
+	margin: 0px auto;
+	text-align: center;
+	position: relative;
+}
+#multistepform-container .form {
+	background: white;
+	border: 0 none;
+	border-radius: 8px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	
+    width: 60%;
+    margin: 0 20%;
+	box-sizing: border-box;
+	position: absolute;
+    
+}
+
+#multistepform-container .block {
+	background: white;
+	border: 0 none;
+	border-radius: 8px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	
+    width: 60%;
+    margin: 0 20%;
+	box-sizing: border-box;
+	position: absolute;
+    
+}
+#multistepform-container .form:not(:first-of-type) {
+	display: none;
+}
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+#multistepform-progressbar {
+	margin-bottom: 10px;
+	overflow: hidden;
+	counter-reset: step;
+    text-align:center;
+}
+#multistepform-progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 11px;
+    padding: 0 15px;
+	display:inline-block;
+	position: relative;
+    margin: 0 !important;
+    padding-bottom: 15px;
+}
+#multistepform-progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 12px;
+    margin: 0 auto 5px auto;
+    line-height: 24px;
+}
+#multistepform-progressbar li.active:before,  #multistepform-progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+
+#multistepform input, #multistepform textarea {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+#multistepform select {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+    background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, white, white);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;     
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/*buttons*/
+#multistepform .button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#multistepform .button:hover, #msform .button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+.alert{
+   padding: 8px;
+    background-color:#e9471b;
+    color:#FFFFFF;
+    font-size: 14px;
+    border-radius: 6px;
+    
+}

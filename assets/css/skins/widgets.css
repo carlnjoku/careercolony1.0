@@ -1,0 +1,31 @@
+
+@import '../../../assets/components/modules/admin/widgets/well/assets/wells.less';
+@import '../../../assets/components/modules/admin/timeline/assets/less/widget-timeline.less';
+@import '../../../assets/components/modules/admin/widgets/widget-collapsible/assets/widget-collapsible.less';
+@import '../../../assets/components/modules/admin/widgets/widget-progress/assets/less/widget-progress.less';
+@import '../../../assets/components/modules/admin/widgets/widget-generic/assets/widget-generic.less';
+@import '../../../assets/components/library/jquery-ui/css/jquery-ui.min.css';
+@import '../../../assets/components/core/less/menus.sidebar.full.less';
+@import '../../../assets/components/core/less/menus.top.full.less';
+@import '../../../assets/components/core/less/menus.top.main.less';
+@import '../../../assets/components/core/less/footer.less';
+@import '../../../assets/components/core/less/responsive.less';
+
+.bg-lightblue {
+  background: #1da0ee;
+}
+.bg-lightpurple {
+  background: #5a20b8;
+}
+.bg-lightprimary {
+  background: #194864;
+}
+.bg-lightorange {
+  background: #f68654;
+}
+.faded_text {
+  color: #b7b5b5;
+}
+.faded_link {
+  color: #aaa7a7;
+}

@@ -1,0 +1,76 @@
+Version 2.1.0 - 17.01.2014
+- Improved:
+	- Bootstrap default grid / equal consistent spacings thoughout the layout;
+	- Improved form validator example;
+	- Improved tables styling and DataTables examples;
+	- Improved modals style & examples;
+	- Improved error pages;
+	- Improved charts style;
+	- Improved on/off toggle buttons;
+	- Improved responsive navigation;
+	- Improved code quality:
+		- Cleaned core.init.js and other scripts;
+		- Separated menus styling in own files e.g. menus.top.main.less handles the common top menu structure & style, while there are separate styling files that handle menu types - menus.top.full.less, menus.top.quick.less, menus.sidebar.full.less, menus.sidebar.quick.less, etc. The separation also makes the removal of unused menus easier.
+	- Improved top profile dropdown menu;
+	- Fixed info button color;
+	- Fixed notify alert colors;
+	- Fixed mirror timeline on tablet;
+	- Other small layout fixes; footer height; unstyled lists;
+	- Fixes for IE8, IE9, IE10, IE11; works on any browser;
+	- Improved the overall theme style;
+	- Improved front module;
+- Added:
+	- Survey Page;
+	- Support Tickets Page;
+	- Social Activity Page;
+	- Course Page;
+	- Course Overview Page;
+	- Course Listings Page;
+	- Video Gallery Page;
+	- Events Page;
+	- Picto Elite Font Icons (852+ icons);
+	- Dashboard Analytics Page;
+	- Users Dashboard Page;
+	- Content / News Page;
+	- Medical Overview Page;
+	- Medical Appointments Page;
+	- Google maps fullscreen example;
+	- Vector maps fullscreen example;
+	- New custom checkbox & radio form controls;
+	- New charts examples;
+	- New pricing tables;
+	- Added 40 layout starter examples (blank pages);
+	- Profile / Resume Page;
+- Updated:
+	- Bootstrap v3.0.3;
+- Removed: 
+	- flat skin/style;
+	- replaced old JavaScript based Themer with a cleaner method for making skins based 100% on the default LESS files and color variables;
+
+Version 2.0.0 (Bootstrap 3.x) - 25/10/2013
+- Complete rewrite: Bootstrap 3
+- Complete rewrite: Modular architecture (component based)
+- Complete rewrite: Documentation
+- Added: Bootstrap Switch (Replacing the Bootstrap-Toggle-Buttons)
+- Added: Blueimp Gallery (Replacing the Bootstrap-Image-Gallery)
+- Added: New Messages Widget
+- Added: New Social Widgets
+- Added: New Timeline Style (Mirror)
+- Fixed: Enforce disabled sticky menus in boxed layout
+- Fixed: Smooth scrolling on touch devices
+- Updated: LESS.js to v1.4.1
+- Updated: jQuery to v1.10.2
+- Updated: jQuery UI to v1.10.3
+- Updated: JQRangeSlider to v5.3.0
+- Updated: FooTable to v2.0.1
+- Updated: FullCalendar to v1.6.4
+- Updated: Easy Pie Chart to v1.2.5
+- Updated: Flot Charts to v0.8.1
+- Updated: Flot Charts Tooltip plugin to v0.6.1
+- Updated: jQuery Sparkline to v2.1.2
+- Updated: Farbtastic to v1.3u
+- Updated: Plupload to v1.5.7
+- Updated: Dropzone to v3.7.1
+- Updated: Glyphicons Regular to v1.8 (470 Premium Font Icons)
+- Added: Glyphicons Social Icons (50 Premium Font Icons)
+- Added: Glyphicons Filetypes Icons (130 Premium Font Icons)

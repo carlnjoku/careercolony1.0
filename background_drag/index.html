@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Background drag using jquery</title>
+<link href='timeline.css' rel='stylesheet' type='text/css'/>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.wallform.js"></script>
+<script>
+$(document).ready(function()
+{
+
+
+/* Uploading Profile BackGround Image */
+$('body').on('change','#bgphotoimg', function()
+{
+
+$("#bgimageform").ajaxForm({target: '#timelineBackground',
+beforeSubmit:function(){},
+success:function(){
+$("#timelineShade").hide();
+$("#bgimageform").hide();
+},
+error:function(){
+} }).submit();
+});
+
+
+
+/* Banner position drag */
+$("body").on('mouseover','.headerimage',function ()
+{
+var y1 = $('#timelineBackground').height();
+var y2 =  $('.headerimage').height();
+$(this).draggable({
+scroll: false,
+axis: "y",
+drag: function(event, ui) {
+if(ui.position.top >= 0)
+{
+ui.position.top = 0;
+}
+else if(ui.position.top <= y1 - y2)
+{
+ui.position.top = y1 - y2;
+}
+},
+stop: function(event, ui)
+{
+}
+});
+});
+
+
+/* Bannert Position Save*/
+$("body").on('click','.bgSave',function ()
+{
+var id = $(this).attr("id");
+var p = $("#timelineBGload").attr("style");
+var Y =p.split("top:")
+var dataString ='position='+Y[1];
+$.ajax({
+type: "POST",
+url: "image_saveBG_ajax.php",
+data: dataString,
+cache: false,
+beforeSend: function(){ },
+success: function(html)
+{
+if(html)
+{
+$(".bgSave").fadeOut('slow');
+$("#timelineShade").fadeIn("slow");
+$("#timelineBGload").removeClass("headerimage");
+return false;
+}
+}
+});
+return false;
+});
+
+
+
+});
+</script>
+</head>
+<body>
+<div id="container">
+<div id="timelineContainer">
+
+<!-- timeline background -->
+<div id="timelineBackground">
+<img src="images/my.jpg" style="margin-top: -60px;width:100%">
+</div>
+
+<!-- timeline background -->
+<div style="background:url(images/timeline_shade.png);" id="timelineShade">
+<form id="bgimageform" method="post" enctype="multipart/form-data" action="image_upload_ajax.php">
+<div class="uploadFile timelineUploadBG">
+<input type="file" name="photoimg" id="bgphotoimg" class=" custom-file-input" original-title="Change Cover Picture">
+</div>
+</form>
+</div>
+
+<!-- timeline profile picture -->
+<div id="timelineProfilePic">
+</div>
+
+<!-- timeline title -->
+<div id="timelineTitle">Srinivas Tamada</div>
+
+<!-- timeline nav -->
+<div id="timelineNav">
+</div>
+
+</div>
+</div>
+<!--
+<iframe src="http://demos.9lessons.info/counter.html" frameborder="0" scrolling="no" height="0"></iframe>
+-->
+</body>
+</html>

@@ -1,0 +1,322 @@
+{% assign background_color = "#ebebeb" %}
+{% assign jumbotron_color = "#f9f8fb" %}
+{% assign label_color = "#ed7e2c" %}
+{% assign border_color = "#ebebeb" %}
+{% assign facebook_url = "" %}
+{% assign twitter_url = "" %}
+{% assign pinterest_url = "" %}
+{% assign youtube_url = "" %}
+{% assign footer_address = "" %}
+{% capture email_title %} Your shopping cart is waiting for you {% endcapture %}
+{% capture email_body %}
+{% if billing_address.first_name %}Hi {{ billing_address.first_name }}, w{% else %}
+W{% endif %}e noticed there {% if item_count == 1 %}was an item{% else %}were some items{% endif %} left in your shopping cart.
+If you're ready to complete your order, your cart is waiting for your return.
+{% endcapture %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="email=no">
+<title>{{ email_title }}</title>
+<link href="http://fonts.googleapis.com/css?family=Lora:400,400italic,700" rel="stylesheet" type="text/css">
+<style>
+a,a span,img{text-decoration:none}body,td{padding:0}body{Margin:0;min-width:100%}#outlook a,a{display:inline-block}img{line-height:1;outline:0;border:0;-ms-interpolation-mode:bicubic;mso-line-height-rule:exactly}table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}.email_summary{display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden}.font_default,a,h1,h2,h3,h4,h5,h6,p{font-family:Helvetica,Arial,sans-serif}small{font-size:86%;font-weight:400}.label .font_default,.primary_btn a,.secondary_btn a,h1,h2,h3,h4,h5,h6{font-weight:700}.pricing_box_cell small{font-size:74%}.font_default,p{font-size:15px}p{line-height:23px;Margin-top:16px;Margin-bottom:24px}.lead{font-size:19px;line-height:27px;Margin-bottom:16px}.header_cell .column_cell{font-size:20px;font-weight:700}.header_cell p{margin-bottom:0}h1,h2,h3,h4,h5,h6{Margin-left:0;Margin-right:0;Margin-top:16px;Margin-bottom:8px;padding:0}.line-through{text-decoration:line-through}h1,h2{font-size:26px;line-height:36px}.pricing_box h1,.pricing_box h2,.primary_pricing_box h1,.primary_pricing_box h2{line-height:20px;Margin-top:16px;Margin-bottom:0}h3,h4{font-size:22px;line-height:30px}h5{font-size:18px;line-height:26px}h6{font-size:16px;line-height:24px}.primary_btn td,.secondary_btn td{font-size:16px;mso-line-height-rule:exactly}.email_body{padding:32px 10px;text-align:center}.col-1,.col-13,.col-2,.col-3,.email_container,.row{display:inline-block;width:100%;vertical-align:top;text-align:center}.email_container{width:100%;margin:0 auto}.col-3,.email_container,.row{max-width:580px}.col-1{max-width:190px}.col-2{max-width:290px}.col-13{max-width:390px}.row{margin:0 auto}.column{width:100%;vertical-align:top}.column_cell{padding:16px;text-align:center;vertical-align:top}.col-bottom-0 .column_cell{padding-bottom:0}.col-top-0 .column_cell{padding-top:0}.content_cell,.email_container,.footer_cell,.header_cell,.image_responsive,.jumbotron_cell{font-size:0!important;text-align:center}.footer_cell,.header_cell{padding-bottom:16px}.footer_cell .col-1 .column_cell,.footer_cell .col-13 .column_cell,.header_cell .column_cell{text-align:center;padding-top:16px}.header_cell img{max-width:156px;height:auto}.footer_cell{text-align:center;}.pricing_box,.primary_pricing_box{border-collapse:separate;-webkit-border-radius:4px}.footer_cell p{Margin:16px 0}.invoice_cell .column_cell{text-align:left;padding-top:0;padding-bottom:0}.invoice_cell p{margin-top:8px;margin-bottom:16px}.pricing_box{padding:10px 16px;border-radius:4px}.primary_pricing_box{padding:18px 16px;border-radius:4px}.text_quote .column_cell{border-left:4px solid;text-align:left;padding-right:0;padding-top:0;padding-bottom:0}.primary_btn,.secondary_btn{clear:both;margin:0 auto}.primary_btn td,.secondary_btn td{text-align:center;vertical-align:middle;padding:12px 24px}.primary_btn a,.primary_btn span,.secondary_btn a,.secondary_btn span{text-align:center;display:block}.label .font_default{font-size:10px;text-transform:uppercase;letter-spacing:2px;padding:3px 7px;white-space:nowrap}.hruler,.icon_holder{width:62px;margin-left:auto;margin-right:auto;clear:both}.icon_holder{width:48px}.hruler_cell,.hspace{font-size:0;height:8px;overflow:hidden}.hruler_cell{height:4px;line-height:4px}.icon_cell{font-size:0;line-height:1;padding:8px;height:48px}.product_row{padding:0 0 16px}.product_row .column_cell{padding:16px 16px 0}.product_row .col-13 .column_cell{text-align:left}.product_row h6{Margin-top:0}.product_row p{Margin-top:8px;Margin-bottom:8px}.order_total_right .column_cell{text-align:right}.order_total_left .column_cell{text-align:left}.order_total h2,.order_total p{Margin:8px 0}.image_responsive img{display:block;width:100%;height:auto;max-width:580px;margin-left:auto;margin-right:auto}@media screen{.font_default,a,h1,h2,h3,h4,h5,h6,p{font-family:"Noto Sans",Helvetica,Arial,sans-serif!important}.primary_btn td,.secondary_btn td{padding:0!important}.primary_btn a,.secondary_btn a{padding:12px 24px!important}}@media screen and (min-width:631px) and (max-width:769px){.col-1,.col-13,.col-2,.col-3{float:left!important}.col-1{width:200px!important}.col-2{width:300px!important}}@media screen and (max-width:630px){.jumbotron_cell{background-size:cover!important}.col-1,.col-13,.col-2,.col-3,.row{max-width:100%!important}}
+
+body, .email_body { background-color: {{ background_color }}; }
+.content_cell { background-color: #ffffff; }
+.header_cell, .secondary_btn td, .icon_primary .icon_cell { background-color: {{ shop.email_accent_color }}; }
+.jumbotron_cell, .footer_cell { background-color: {{ jumbotron_color }}; }
+.primary_btn td, .label .font_default { background-color: {{ label_color }}; }
+.icon_secondary .icon_cell { background-color: #e1e3e7; }
+.header_cell .column_cell, .header_cell a, .header_cell a span, .primary_btn a, .primary_btn span, .secondary_btn a, .secondary_btn span, .label .font_default { color: #ffffff; }
+h2, h4, h5, h6 { color: #383d42; }
+.column_cell { color: #888888; }
+h1, h3, a, a span, .text-secondary, .column_cell .text-secondary, .content_cell h2 .text-secondary { color: {{ shop.email_accent_color }}; }
+.footer_cell a, .footer_cell a span { color: #7a7a7a; }
+.text-muted, .footer_cell .column_cell, .content h4 span, .content h3 span { color: #b3b3b5; }
+.footer_cell, .product_row, .order_total { border-top: 1px solid; }
+.product_row, .order_total, .icon_secondary .icon_cell,  .footer_cell,  .content .product_row,  .content .order_total, .pricing_box, .text_quote .column_cell {
+	border-color: {{ border_color }};
+}
+</style>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+<div class="email_summary">{{ email_title }}</div>
+<div class="email_body">
+  <!--[if (gte mso 9)|(IE)]>
+  <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+    <tbody>
+      <tr>
+        <td width="580" align="center" valign="top">
+  <![endif]-->
+  	<div class="email_container">
+      <table class="header" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td class="header_cell col-bottom-0" align="center" valign="top">
+                <!--[if (gte mso 9)|(IE)]>
+                <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                  <tbody>
+                    <tr>
+                      <td width="580" align="center" valign="top">
+                <![endif]-->
+                <div class="row">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                    <tbody>
+                      <tr>
+                        <td width="580" align="center" valign="top">
+                  <![endif]-->
+                  <div class="col-3">
+                    <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell font_default" align="center" valign="top">
+                            {% if shop.email_logo_url %}
+                              <a href="{{shop.url}}"><img src="{{shop.email_logo_url}}" alt="{{ shop.name }}" width="{{ shop.email_logo_width }}"></a>
+                            {% else %}
+                              <h3><a href="{{shop.url}}"><span><strong>{{ shop.name }}</strong></span></a></h3>
+                            {% endif %}
+                          </td><!-- /.column_cell -->
+                        </tr>
+                      </tbody>
+                    </table><!-- /.column -->
+                  </div><!-- /.col-3 -->
+                  <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <![endif]-->
+                </div><!-- /.row -->
+                <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <![endif]-->
+            </td><!-- /.header_cell -->
+          </tr>
+        </tbody>
+      </table><!-- /.header -->
+      <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td class="jumbotron_cell" align="center" valign="top">
+                <!--[if (gte mso 9)|(IE)]>
+                <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                  <tbody>
+                    <tr>
+                      <td width="580" align="center" valign="top">
+                <![endif]-->
+                <div class="row">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                    <tbody>
+                      <tr>
+                        <td width="580" align="center" valign="top">
+                  <![endif]-->
+                  <div class="col-3">
+                    <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell font_default" align="center" valign="top">
+                            <table class="icon_holder icon_primary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td class="hspace">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td class="icon_cell"><img src="{{ 'ic_shopping_basket_white_48dp_2x.png' | file_url }}" width="48" height="48" alt=""/></td>
+                                </tr>
+                                <tr>
+                                  <td class="hspace">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table><!-- /.icon_holder:icon_primary -->
+                            <h2>{{ email_title }}</h2>
+                            {% if custom_message %}
+                              <p>{{ custom_message }}</p>
+                            {% else %}
+                              <p>{{ email_body }}</p>
+                            {% endif %}
+                            <table class="secondary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                              <tbody>
+                                <tr>
+                                  <td class="font_default"><a href="{{ url }}"><span>Complete your purchase</span></a></td>
+                                </tr>
+                              </tbody>
+                            </table><!-- /.secondary_btn -->
+                            <table class="icon_holder" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td class="hspace">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table><!-- /.icon_holder -->
+                            <p class="text-muted"><a href="{{ shop.url }}" class="text-muted">or <strong class="text-muted">Visit our store</strong></a></p>
+                          </td><!-- /.column_cell -->
+                        </tr>
+                      </tbody>
+                    </table><!-- /.column -->
+                  </div><!-- /.col-3 -->
+                  <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <![endif]-->
+                </div><!-- /.row -->
+                <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <![endif]-->
+            </td><!-- /.jumbotron_cell -->
+          </tr>
+        </tbody>
+      </table><!-- /.jumbotron -->
+	  {% for line in line_items %}
+      <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td class="content_cell product_row" align="center" valign="top">
+                <!--[if (gte mso 9)|(IE)]>
+                <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                  <tbody>
+                    <tr>
+                      <td width="580" align="center" valign="top">
+                <![endif]-->
+                <div class="row">
+                  {% if line.image %}
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                    <tbody>
+                      <tr>
+                        <td width="190" align="center" valign="top">
+                  <![endif]-->
+                  <div class="col-1">
+                    <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell font_default image_thumb" align="center" valign="top"><img src="{{ line | img_url: 'medium' }}" width="128" height="" alt=""/></td><!-- /.column_cell:image_thumb -->
+                        </tr>
+                      </tbody>
+                    </table><!-- /.column -->
+                  </div><!-- /.col-1 -->
+                  <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                      <td width="390" align="center" valign="top">
+                  <![endif]-->
+                  {% endif %}
+                  <div class="col-13">
+                    <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell font_default" align="center" valign="top">
+                            <h6><span class="text-muted">{{ line.quantity }}×</span> {{ line.title }}</h6>
+                            {% if line.variant.title != 'Default Title' %}
+                              <p><strong>{{ line.variant.title }}</strong></p>
+                            {% endif %}
+                          </td><!-- /.column_cell -->
+                        </tr>
+                      </tbody>
+                    </table><!-- /.column -->
+                  </div><!-- /.col-13 -->
+                  {% if line.image %}
+                  <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <![endif]-->
+                  {% endif %}
+                </div><!-- /.row -->
+                <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <![endif]-->
+            </td><!-- /.content_cell:product_row -->
+          </tr>
+        </tbody>
+      </table><!-- /.content -->
+      {% endfor %}
+      <table class="footer" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td class="footer_cell" align="center" valign="top">
+                <!--[if (gte mso 9)|(IE)]>
+                <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                  <tbody>
+                    <tr>
+                      <td width="580" align="center" valign="top">
+                <![endif]-->
+                <div class="row">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                    <tbody>
+                      <tr>
+                        <td width="580" align="center" valign="top">
+                  <![endif]-->
+                  <div class="col-3 col-bottom-0">
+                    <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell font_default" align="center" valign="top">
+                            <p>
+                              {% if facebook_url != blank %} 
+                              <a href="{{ facebook_url }}">&nbsp;<img src="{{ 'facebook-iso-black.png' | file_url }}" width="32" height="32" alt="">&nbsp;</a> &nbsp;&nbsp;         
+                              {% endif %}
+                              {% if twitter_url != blank %}
+                              <a href="{{ twitter_url }}">&nbsp;<img src="{{ 'twitter-iso-black.png' | file_url }}" width="32" height="32" alt="">&nbsp;</a> &nbsp;&nbsp; 
+                              {% endif %}
+                              {% if pinterest_url != blank %}
+                              <a href="{{ instagram_url }}">&nbsp;<img src="{{ 'pinterest-iso-black.png' | file_url }}" width="32" height="32" alt="">&nbsp;</a> &nbsp;&nbsp; 
+                              {% endif %}
+                              {% if youtube_url != blank %}
+                              <a href="{{ youtube_url }}">&nbsp;<img src="{{ 'youtube-iso-black.png' | file_url }}" width="32" height="32" alt="">&nbsp;</a>
+                              {% endif %}
+                            </p>
+                          <p><strong>{{ shop.name }}</strong>{% if footer_address != blank %}, {{ footer_address }}{% endif %}</p>
+                          If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a>
+                          </td><!-- /.column_cell -->
+                        </tr>
+                      </tbody>
+                    </table><!-- /.column -->
+                  </div><!-- /.col-3 -->
+                  <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <![endif]-->
+                </div><!-- /.row -->
+                <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <![endif]-->
+            </td><!-- /.footer_cell -->
+          </tr>
+        </tbody>
+      </table><!-- /.footer -->
+    </div><!-- /.email_container -->
+  <!--[if (gte mso 9)|(IE)]>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <![endif]--> 
+</div><!-- /.email_body --> 
+</body>
+</html>

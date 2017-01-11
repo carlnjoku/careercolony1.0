@@ -1,0 +1,2662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="date=no">
+<meta name="format-detection" content="address=no">
+<meta name="format-detection" content="email=no">
+<title></title>
+<link href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css">
+<style type="text/css">
+/**
+ * SimpleApp
+ * http://notification-emails.com/
+ * Last Modified: 10/05/2016
+**/
+/* Reset */
+body { Margin: 0; padding: 0; min-width: 100%; }
+a, #outlook a { display: inline-block; }
+a, a span { text-decoration: none; }
+img { line-height: 1; outline: none; border: 0; text-decoration: none; -ms-interpolation-mode: bicubic; mso-line-height-rule: exactly; }
+table { border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+td { padding: 0; }
+/* Email preview text */
+.email_summary { display:none; font-size:1px; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; }
+/* Typography */
+.font_default, h1, h2, h3, h4, h5, h6, p, a { font-family: Helvetica, Arial, sans-serif; /* this is used for email clients that don't support webfonts */ }
+small { font-size: 86%; font-weight: normal; }
+.pricing_box_cell small { font-size: 74%; }
+.font_default, p { font-size: 15px; /* default text size */ }
+p { line-height: 23px; Margin-top: 16px; Margin-bottom: 24px; }
+.lead { font-size: 19px; line-height: 27px; Margin-bottom: 16px; }
+.header_cell .column_cell { font-size: 20px; font-weight: bold; }
+.header_cell p { margin-bottom: 0; }
+h1, h2, h3, h4, h5, h6 { Margin-left: 0; Margin-right: 0; Margin-top: 16px; Margin-bottom: 8px; padding: 0; }
+.line-through { text-decoration: line-through; }
+h1,
+h2 {
+	font-size: 26px;
+	line-height: 36px;
+	font-weight: bold;
+}
+.pricing_box h1,
+.pricing_box h2,
+.primary_pricing_box h1,
+.primary_pricing_box h2 {
+	line-height: 20px;
+	Margin-top: 16px;
+	Margin-bottom: 0;
+}
+h3,
+h4 {
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: bold;
+}
+h5 {
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: bold;
+}
+h6 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: bold;
+}
+.primary_btn td,
+.secondary_btn td {
+	font-size: 16px;
+	mso-line-height-rule: exactly;
+}
+.primary_btn a,
+.secondary_btn a {
+	font-weight: bold;
+}
+/* Grid */
+.email_body {
+	padding: 32px 6px;
+	text-align: center;
+}
+.email_container, .row, .col-1, .col-13, .col-2, .col-3 {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	text-align: center;
+}
+.email_container {
+	width: 100%;
+	max-width: 588px; 
+	margin: 0 auto;
+}
+.row,
+.col-3 { 
+	max-width: 580px; 
+}
+.col-1 { max-width: 190px; }
+.col-2 { max-width: 290px; }
+.col-13 { max-width: 390px; }
+
+.row { margin: 0 auto; }
+.column {
+	width: 100%;
+	vertical-align: top;
+}
+.column_cell {
+	padding: 16px;
+	text-align: center;
+	vertical-align: top;
+}
+.col-bottom-0 .column_cell { padding-bottom: 0; }
+.col-top-0 .column_cell { padding-top: 0; }
+/* Content Blocks */
+.email_container, 
+.header_cell, 
+.jumbotron_cell, 
+.content_cell, 
+.footer_cell,
+.image_responsive {
+	font-size: 0 !important;
+	text-align: center;
+}
+/* Header & Footer */
+.header_cell,
+.footer_cell {
+	padding-bottom: 16px;
+}
+.header_cell .column_cell,
+.footer_cell .col-13 .column_cell,
+.footer_cell .col-1 .column_cell {
+	text-align: left;
+	padding-top: 16px;
+}
+
+.header_cell img {
+	max-width: 156px;
+	height: auto;
+}
+.footer_cell {
+	text-align: center;
+}
+.footer_cell p { Margin: 16px 0; }
+/* Jumbotron */
+.invoice_cell .column_cell {
+	text-align: left;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.invoice_cell p {
+	margin-top: 8px;
+	margin-bottom: 16px;
+}
+/* Content */
+.pricing_box {
+	border-collapse: separate;
+	padding: 10px 16px;
+	
+	
+}
+.primary_pricing_box {
+	border-collapse: separate;
+	padding: 18px 16px;
+}
+.text_quote .column_cell {
+	border-left: 4px solid;
+	text-align: left;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+/* Buttons */
+.primary_btn,
+.secondary_btn {
+	clear: both;
+	margin: 0 auto;
+}
+.primary_btn td,
+.secondary_btn td {
+	text-align: center;
+	vertical-align: middle;
+	padding: 12px 24px;
+	
+	
+}
+.primary_btn a,
+.primary_btn span,
+.secondary_btn a,
+.secondary_btn span {
+	text-align: center;
+	display: block;
+}
+.label .font_default {
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 3px 7px;
+	white-space: nowrap;
+}
+/* Icon Holder + Rules */
+.icon_holder, .hruler {
+	width: 62px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+.icon_holder { width: 48px; }
+.hspace, .hruler_cell {
+	font-size: 0;
+	height: 8px;
+	overflow: hidden;
+}
+.hruler_cell {
+	height: 4px;
+	line-height: 4px;
+}
+.icon_cell {  font-size: 0;
+  line-height: 1;
+  padding: 8px;
+  height: 48px;
+}
+/* Product Row */
+.product_row { padding: 0 0 16px; }
+.product_row .column_cell { padding: 16px 16px 0; }
+.image_thumb img {
+	
+	
+}
+.product_row .col-13 .column_cell { text-align: left; }
+.product_row h6 { Margin-top: 0; }
+.product_row p {
+	Margin-top: 8px;
+	Margin-bottom: 8px;
+}
+.order_total_right .column_cell { text-align: right; }
+.order_total_left .column_cell { text-align: left; }
+.order_total p { Margin: 8px 0; }
+.order_total h2 { Margin: 8px 0; }
+/* Responsive Images */
+.image_responsive img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 580px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Colors */
+body,
+.email_body,
+.header_cell,
+.content_cell,
+.footer_cell {
+	background-color: #282828; 
+}
+.secondary_btn td,
+.icon_primary .icon_cell,
+.primary_pricing_box {
+	background-color: #f36b6b;
+}
+.jumbotron_cell,
+.pricing_box {
+	background-color: #383838;
+}
+.primary_btn td,
+.label .font_default {
+	background-color: #1fb57b;
+}
+.icon_secondary .icon_cell {
+	background-color: #1a1a1a;
+}
+.label_1 .font_default {
+	background-color: #62a9dd;
+}
+.label_2 .font_default {
+	background-color: #8965ad;
+}
+.label_3 .font_default {
+	background-color: #df6164;
+}
+.primary_btn a,
+.primary_btn span,
+.secondary_btn a,
+.secondary_btn span,
+.label .font_default,
+.primary_pricing_box,
+.primary_pricing_box h1,
+.primary_pricing_box small {
+	color: #ffffff;
+}
+h2,
+h4,
+h5,
+h6 {
+	color: #ffffff;
+}
+.column_cell {
+	color: #888888;
+}
+.header_cell .column_cell,
+.header_cell a,
+.header_cell a span,
+h1,
+h3,
+a,
+a span,
+.text-secondary,
+.column_cell .text-secondary, 
+.content_cell h2 .text-secondary {
+	color: #f36b6b;
+}
+.footer_cell a, 
+.footer_cell a span {
+	color: #7a7a7a;
+}
+.text-muted,
+.footer_cell .column_cell, 
+.content h4 span, 
+.content h3 span {
+	color: #616161;
+}
+.header_cell,
+.footer_cell {
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+}
+.header_cell,
+.footer_cell,
+.jumbotron_cell,
+.content_cell {
+	border-left: 4px solid;
+	border-right: 4px solid;
+}
+.footer_cell,
+.product_row, 
+.order_total {
+	border-top: 1px solid;
+}
+.header_cell,
+.footer_cell,
+.jumbotron_cell,
+.content_cell,
+.product_row, 
+.order_total,
+.icon_secondary .icon_cell, 
+.footer_cell, 
+.content .product_row, 
+.content .order_total,
+.pricing_box,
+.text_quote .column_cell {
+	border-color: #1a1a1a;
+}
+/* Responsive */
+@media screen {
+  h1, h2, h3, h4, h5, h6, p, a, .font_default {
+	  font-family: "Noto Sans", Helvetica, Arial, sans-serif !important;  /* web font */
+  }
+  .primary_btn td, .secondary_btn td {
+	  padding: 0 !important;
+  }
+  .primary_btn a, .secondary_btn a {
+	  padding: 12px 24px !important;
+  }
+}
+@media screen and (min-width: 631px) and (max-width: 769px) {
+.col-1, .col-2, .col-3, .col-13 {
+	float: left !important;
+}
+.col-1 {
+	width: 200px !important;
+}
+.col-2 {
+	width: 300px !important;
+}
+}
+@media screen and (max-width: 630px) {
+  .jumbotron_cell {
+	  background-size: cover !important;
+  }
+  .row, .col-1, .col-13, .col-2, .col-3 {
+	  max-width: 100% !important;
+  }
+}
+</style>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+<div class="email_body">
+  <!--[if (gte mso 9)|(IE)]>
+  <table width="588" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+    <tbody>
+      <tr>
+        <td width="588" align="center" valign="top">
+  <![endif]-->
+  	<div class="email_container">
+    <table class="header" width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td class="header_cell col-bottom-0" align="center" valign="top">
+              <!--[if (gte mso 9)|(IE)]>
+              <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                <tbody>
+                  <tr>
+                    <td width="580" align="center" valign="top">
+              <![endif]-->
+              <repeater>
+              <layout label="header">
+                <div class="row">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                    <tbody>
+                      <tr>
+                        <td width="580" align="center" valign="top">
+                  <![endif]-->
+                  <div class="col-3">
+                    <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell font_default" align="center" valign="top"><img editable="true" label="logo" src="images/email_logo.png" width="156" height="42" alt="SimpleApp"/></td><!-- /.column_cell -->
+                        </tr>
+                      </tbody>
+                    </table><!-- /.column -->
+                  </div><!-- /.col-3 -->
+                  <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <![endif]-->
+                </div><!-- /.row -->
+              </layout>
+              <layout label="header_2">
+                <div class="row">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                    <tbody>
+                      <tr>
+                        <td width="290" align="center" valign="top">
+                  <![endif]-->
+                  <div class="col-2">
+                    <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell font_default" align="center" valign="top"><img editable="true" label="logo" src="images/email_logo.png" width="156" height="42" alt="SimpleApp"/></td><!-- /.column_cell -->
+                        </tr>
+                      </tbody>
+                    </table><!-- /.column -->
+                  </div><!-- /.col-2 -->
+                  <!--[if (gte mso 9)|(IE)]>
+                      </td>
+                      <td width="290" align="center" valign="top">
+                  <![endif]-->
+                  <div class="col-2">
+                    <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="column_cell font_default" align="center" valign="top"><p><singleline>Summarize your email here</singleline></p></td><!-- /.column_cell -->
+                        </tr>
+                      </tbody>
+                    </table><!-- /.column -->
+                  </div><!-- /.col-2 -->
+                  <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <![endif]-->
+                </div><!-- /.row -->
+              </layout>
+              </repeater>
+              <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <![endif]-->
+          </td><!-- /.header_cell -->
+        </tr>
+      </tbody>
+    </table><!-- /.header -->
+    <repeater>
+    	<layout label="jumbotron_title">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell" align="center" valign="top" mc:edit="jumbotron_title_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <h4><singleline>Heading</singleline></h4>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_title_2">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell" align="center" valign="top" mc:edit="jumbotron_title_2_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h2>Heading</h2>
+                                <p class="lead">Subtitle</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_title_3">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell" align="center" valign="top" mc:edit="jumbotron_title_3_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h4>Heading</h4>
+                                <p class="lead">Subtitle</p></multiline>
+                                <table class="primary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><a href="#"><singleline><span>Button</span></singleline></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.primary_btn -->
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_title_4">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell" align="center" valign="top" mc:edit="jumbotron_title_4_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                               <table class="icon_holder icon_primary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="icon_cell"><img editable src="images/ic_vpn_key_white_48dp_2x.png" width="48" height="48" alt=""/></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.icon_holder:icon_primary -->
+                                <h3><singleline>Heading</singleline></h3>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_title_5">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell" align="center" valign="top" mc:edit="jumbotron_title_5_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                               <table class="icon_holder icon_secondary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="icon_cell"><img editable src="images/ic_error_white_48dp_2x.png" width="48" height="48" alt=""/></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.icon_holder:icon_secondary -->
+                                <p class="lead"><singleline>Heading</singleline></p>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_text">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell product_row" align="center" valign="top" mc:edit="jumbotron_text_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><p>Pellentesque et ipsum imperdiet, congue enim quis, cursus nulla. Nulla quis velit ac arcu tristique vehicula ac vitae erat.</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_buttons">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell" align="center" valign="top" mc:edit="jumbotron_buttons_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="primary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><a href="#"><singleline><span>Button</span></singleline></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .primary_btn -->
+                               <table class="icon_holder icon_secondary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.icon_holder:icon_secondary -->
+                                <table class="secondary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><a href="#"><singleline><span>Button</span></singleline></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .secondary_btn -->
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_service">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell product_row" align="center" valign="top" mc:edit="jumbotron_service_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="390" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-13">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><small class="text-muted">Date</small>
+                                <h6>Title <small>secondary text</small> </h6>
+                                <p>Summary</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-13 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="left" valign="top"><h1><singleline>$0</singleline></h1></td><!-- /.column_cell:image_thumb -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_service_2">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell product_row" align="center" valign="top" mc:edit="jumbotron_service_2_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h6>Title</h6>
+                                <p>Summary <small class="text-muted">secondary text</small></p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="primary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><a href="#"><singleline><span>Button</span></singleline></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .primary_btn -->
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_invoice">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell invoice_cell" align="center" valign="top" mc:edit="jumbotron_invoice_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <h6><singleline>Invoice # <small>Date</small></singleline></h6>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+              <tr>
+                <td class="jumbotron_cell invoice_cell" align="center" valign="top">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="label" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label -->
+                                <multiline><p>Text</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="label" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label -->
+                                <multiline><p>Text</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_order">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell invoice_cell" align="center" valign="top" mc:edit="jumbotron_order_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="label" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label -->
+                                <multiline><p>Text</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="label" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label -->
+                                <multiline><p>Text</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="label" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label -->
+                                <p><strong class="text-secondary"><singleline>$0</singleline></strong></p>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+    
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_order_2">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell invoice_cell" align="center" valign="top" mc:edit="jumbotron_order_2_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="label" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label -->
+                                <multiline><p>Text</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="label" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label -->
+                                <multiline><p>Text</p></multiline>
+                                <table class="label" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label -->
+                                <multiline><p>Text</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+    
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_stats">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell" align="center" valign="top" mc:edit="jumbotron_stats_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><p class="lead">Heading</p>
+                                <span class="text-muted">Summary</span></multiline>
+                              </td>
+                              <!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+              <tr>
+                <td class="jumbotron_cell" align="center" valign="top">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="icon_holder icon_primary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="icon_cell"><img editable src="images/ic_person_white_48dp_2x.png" width="48" height="48" alt=""/></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.icon_holder:icon_primary -->
+                                <h3><singleline>0</singleline></h3>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="label label_1" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label: label_1 -->
+                                <table class="label label_2" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label: label_2 -->
+                                <table class="label label_3" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="hspace">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="font_default"><singleline>Label</singleline></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .label: label_3 -->
+                              </td>
+                              <!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_subtotal">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell order_total order_total_right" align="center" valign="top" mc:edit="jumbotron_subtotal_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                              <multiline>Subtotal <strong>$0</strong></multiline></td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="jumbotron_message">
+          <table class="jumbotron" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="jumbotron_cell product_row" align="center" valign="top" mc:edit="jumbotron_message_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default image_thumb" align="center" valign="top">
+                                <table class="icon_holder icon_secondary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="icon_cell"><img editable src="images/ic_person_white_48dp_2x.png" width="48" height="48" alt=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.icon_holder:icon_secondary -->
+                                <multiline><p class="text-muted"><strong>User</strong><br />
+                                <small>Date</small></p></multiline>
+                              </td><!-- /.column_cell:image_thumb -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="390" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-13">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h5>Subject</h5>
+                                <p>Summary</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-13 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.jumbotron_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.jumbotron -->
+    	</layout>
+    	<layout label="text_block">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell" align="center" valign="top" mc:edit="text_block_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><p>Pellentesque et ipsum imperdiet, congue enim quis, cursus nulla. Nulla quis velit ac arcu tristique vehicula ac vitae erat.</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="default_button">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell" align="center" valign="top" mc:edit="default_button_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h5>Heading</h5>
+                                <p>Summary</p></multiline>
+                                <table class="secondary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><a href="#"><singleline><span>Button</span></singleline></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .secondary_btn -->
+                                <multiline><p><small class="text-muted">Secondary text.</small><br />
+                                <a href="#"><strong class="text-muted">Text Link</strong></a></p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="primary_button">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell" align="center" valign="top" mc:edit="primary_button_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h5>Heading</h5>
+                                <p>Summary</p></multiline>
+                                <table class="primary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><a href="#"><singleline><span>Button</span></singleline></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .primary_btn -->
+                                <multiline><p><small class="text-muted">Secondary text.</small><br />
+                                <a href="#"><strong class="text-muted">Text Link</strong></a></p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="responsive_image">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell image_responsive" align="center" valign="top" mc:edit="responsive_image_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                        <img editable src="images/thumb_580x320.png" alt="" width="580" height="" />
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell:product_row -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="pricing">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell" align="center" valign="top" mc:edit="pricing_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                          <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="pricing" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                    <tr>                                  <td class="pricing_box font_default" align="center" valign="top">
+                                        <multiline><strong class="text-muted">Heading</strong>
+                                        <h1><small>$</small>0</h1>
+                                        <small class="text-muted">/month</small></multiline>
+                                        
+                                      </td><!-- /.column_cell -->
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.column -->
+                                <multiline><p><strong class="text-secondary">●</strong> Text</p>
+                                <p><strong class="text-secondary">●</strong> Text</p></multiline>
+                              
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="pricing" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="primary_pricing_box font_default" align="center" valign="top">
+                                        <multiline><strong>Heading</strong>
+                                        <h1><small>$</small>0</h1>
+                                        <small class="text-muted">/month</small></multiline>
+                                        
+                                      </td><!-- /.column_cell -->
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.column -->
+                                <multiline><p><strong class="text-secondary">●</strong>Text</p>
+                              <p><strong class="text-secondary">●</strong> Text                          </p></multiline></td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="pricing_2">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell" align="center" valign="top" mc:edit="pricing_2_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="pricing" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                    <tr>                                  <td class="pricing_box font_default" align="center" valign="top">
+                                        <multiline><strong class="text-muted">Heading</strong>
+                                        <h1><small>$</small>0</h1>
+                                        <small class="text-muted">/month</small></multiline>
+                                        
+                                      </td><!-- /.column_cell -->
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.column -->
+                                <multiline><p><strong class="text-secondary">●</strong>Text</p>
+                                <p><strong class="text-secondary">●</strong>Text</p></multiline>
+                              
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="pricing" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="primary_pricing_box font_default" align="center" valign="top">
+                                        <multiline><strong>Heading</strong>
+                                        <h1><small>$</small>0</h1>
+                                        <small class="text-muted">/month</small></multiline>
+                                        
+                                      </td><!-- /.column_cell -->
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.column -->
+                                <multiline><p><strong class="text-secondary">●</strong>Text</p>
+                                <p><strong class="text-secondary">●</strong>Text</p></multiline>
+                              
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="pricing" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                    <tr>                                  <td class="pricing_box font_default" align="center" valign="top">
+                                        <mulitline><strong class="text-muted">Heading</strong>
+                                        <h1><small>$</small>0</h1>
+                                        <small class="text-muted">/month</small></mulitline>
+                                        
+                                      </td><!-- /.column_cell -->
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.column -->
+                                <multiline><p><strong class="text-secondary">●</strong>Text</p>
+                                <p><strong class="text-secondary">●</strong>Text</p></multiline>
+    
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="title">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell product_row order_total_left" align="center" valign="top" mc:edit="title_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                               <h2><singleline>Heading</singleline></h2></td>
+                              <!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell:product_row -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="product_row">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell product_row" align="center" valign="top" mc:edit="product_row_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default image_thumb" align="center" valign="top"><img editable src="images/thumb_158x158.png" width="128" height="128" alt=""/></td><!-- /.column_cell:image_thumb -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="390" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-13">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h6><span class="text-muted">1×</span> Item</h6>
+                                <p>Summary</p>
+                                <p class="lead"><strong class="text-secondary">$0</strong></p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-13 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell:product_row -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="invoice_row">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell product_row" align="center" valign="top" mc:edit="invoice_row_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="390" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-13">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h6>Item</h6>
+                                <p>Summary</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-13 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="left" valign="top"><p class="lead">
+                                <singleline>$0</singleline>
+                              </p></td><!-- /.column_cell:image_thumb -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell:product_row -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="total">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell product_row order_total_right" align="center" valign="top" mc:edit="total_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h5><small><strong>Total</strong></small> <span class="text-secondary">$1,000</span></h5></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell:product_row -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="icon_heading">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell product_row" align="center" valign="top" mc:edit="icon_heading_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="icon_holder icon_primary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="icon_cell"><img editable src="images/ic_shopping_basket_white_48dp_2x.png" width="48" height="48" alt=""/></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.icon_holder:icon_primary -->
+                               <multiline><h3>Heading</h3>
+                               <p class="text-secondary">Summary</p></multiline>
+                               </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="two_columns">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell product_row" align="center" valign="top" mc:edit="two_columns_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><small class="text-muted">Label</small>
+                                <p><strong>Heading</strong></p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="290" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-2">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><small class="text-muted">Label</small>
+                                <p><strong>Heading</strong></p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-2 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="message">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell product_row" align="center" valign="top" mc:edit="message_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="190" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-1">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default image_thumb" align="center" valign="top">
+                                <table class="icon_holder icon_secondary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="icon_cell"><img editable src="images/ic_person_white_48dp_2x.png" width="48" height="48" alt=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.icon_holder:icon_secondary -->
+                                <multiline><p class="text-muted"><strong>User</strong><br />
+                                <small>Date</small></p></multiline>
+                              </td><!-- /.column_cell:image_thumb -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-1 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          <td width="390" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-13">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <multiline><h5>Subject</h5>
+                                <p>Summary</p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-13 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell:product_row -->
+              </tr>
+              <tr>
+                <td class="content_cell" align="center" valign="top" mc:edit="message_content_2">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3 col-bottom-0">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="primary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><a href="#"><singleline><span>Button</span></singleline></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .primary_btn -->
+                                <table class="icon_holder icon_secondary" width="80" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                        <td class="hspace">&nbsp; </td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- /.icon_holder:icon_secondary -->
+                                <multiline><p><a href="#" class="text-muted"><span class="text-muted">Text Link</span></a></p></multiline>
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell:product_row -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    	<layout label="quote">
+          <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td class="content_cell" align="center" valign="top" mc:edit="quote_content">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="row">
+                      <!--[if (gte mso 9)|(IE)]>
+                      <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                        <tbody>
+                          <tr>
+                            <td width="580" align="center" valign="top">
+                      <![endif]-->
+                      <div class="col-3">
+                        <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td class="column_cell font_default" align="center" valign="top">
+                                <table class="text_quote" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <td class="column_cell font_default" align="left" valign="top">
+                                        <multiline><h3 class="text-muted">Heading</h3>
+                                        <p class="lead text-muted">Subtitle</p>
+                                        <p class="text-muted">Summary</p></multiline></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+    
+                                <multiline><p> Sed ut nisl id tellus consequat scelerisque sed semper lorem.</p></multiline>
+                                <table class="secondary_btn" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td class="font_default"><a href="#"><singleline><span>Button</span></singleline></a></td>
+                                    </tr>
+                                  </tbody>
+                                </table><!-- end .secondary_btn -->
+                              </td><!-- /.column_cell -->
+                            </tr>
+                          </tbody>
+                        </table><!-- /.column -->
+                      </div><!-- /.col-3 -->
+                      <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <![endif]-->
+                    </div><!-- /.row -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                </td><!-- /.content_cell -->
+              </tr>
+            </tbody>
+          </table><!-- /.content -->
+    	</layout>
+    </repeater>
+    <table class="footer" width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td class="footer_cell" align="center" valign="top" mc:edit="footer_content">
+              <!--[if (gte mso 9)|(IE)]>
+              <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                <tbody>
+                  <tr>
+                    <td width="580" align="center" valign="top">
+              <![endif]-->
+              <repeater>
+                <layout label="footer">
+                  <div class="row">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="390" align="center" valign="top">
+                    <![endif]-->
+                    <div class="col-13 col-bottom-0">
+                      <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="column_cell font_default" align="center" valign="top">
+                            <multiline><strong>Company</strong><br />
+                            <small>Text<br /></small></multiline>
+                            <small>
+                            <unsubscribe>Unsubscribe</unsubscribe></small></td><!-- /.column_cell -->
+                          </tr>
+                        </tbody>
+                      </table><!-- /.column -->
+                    </div><!-- /.col-13 -->
+                    <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        <td width="190" align="center" valign="top">
+                    <![endif]-->
+                    <div class="col-1 col-bottom-0">
+                      <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="column_cell font_default" align="center" valign="top">
+                              <a href="#">&nbsp;<img editable src="images/ic_facebook.png" width="24" height="24" alt=""/>&nbsp;</a> &nbsp;<a href="#">&nbsp;<img editable src="images/ic_twitter.png" width="24" height="24" alt=""/>&nbsp;</a> &nbsp;<a href="#">&nbsp;<img editable src="images/ic_pinterest.png" width="24" height="24" alt=""/>&nbsp;</a> &nbsp;<a href="#">&nbsp;<img editable src="images/ic_youtube.png" width="24" height="24" alt=""/>&nbsp;</a>
+                            </td><!-- /.column_cell -->
+                          </tr>
+                        </tbody>
+                      </table><!-- /.column -->
+                    </div><!-- /.col-1 -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                  </div><!-- /.row -->
+                </layout>
+                <layout label="footer_2">
+                  <div class="row">
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="580" border="0" cellspacing="0" cellpadding="0" align="center" style="vertical-align: top;">
+                      <tbody>
+                        <tr>
+                          <td width="580" align="center" valign="top">
+                    <![endif]-->
+                    <div class="col-3 col-bottom-0">
+                      <table class="column" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td class="column_cell font_default" align="center" valign="top">
+                            <p><a href="#">&nbsp;<img editable src="images/ic_facebook.png" width="24" height="24" alt=""/>&nbsp;</a> &nbsp;<a href="#">&nbsp;<img editable src="images/ic_twitter.png" width="24" height="24" alt=""/>&nbsp;</a> &nbsp;<a href="#">&nbsp;<img editable src="images/ic_pinterest.png" width="24" height="24" alt=""/>&nbsp;</a> &nbsp;<a href="#">&nbsp;<img editable src="images/ic_youtube.png" width="24" height="24" alt=""/>&nbsp;</a></p>
+                            <multiline><strong>Company</strong><br />
+                            <small>Text<br /></small></multiline>
+                            <small><unsubscribe>Unsubscribe</unsubscribe></small>
+                            </td><!-- /.column_cell -->
+                          </tr>
+                        </tbody>
+                      </table><!-- /.column -->
+                    </div><!-- /.col-3 -->
+                    <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <![endif]-->
+                  </div><!-- /.row -->
+                </layout>
+              </repeater>
+              <!--[if (gte mso 9)|(IE)]>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <![endif]-->
+          </td><!-- /.footer_cell -->
+        </tr>
+      </tbody>
+    </table><!-- /.footer -->
+    </div><!-- /.email_container -->
+  <!--[if (gte mso 9)|(IE)]>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <![endif]--> 
+</div><!-- /.email_body --> 
+<div class="email_summary"><unsubscribe>Unsubscribe</unsubscribe></div>
+</body>
+</html>

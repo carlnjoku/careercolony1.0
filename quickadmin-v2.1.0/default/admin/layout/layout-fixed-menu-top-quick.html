@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7 fixed top-quick sticky-top"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8 fixed top-quick"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9 fixed top-quick"> <![endif]-->
+<!--[if gt IE 8]> <html class="ie gt-ie8 fixed top-quick"> <![endif]-->
+<!--[if !IE]><!--><html class="fixed top-quick"><!-- <![endif]-->
+<head>
+		<title>Quick Admin Template (v2.1.0)</title>
+	
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	
+	<!-- 
+	**********************************************************
+	In development, use the LESS files and the less.js compiler
+	instead of the minified CSS loaded by default.
+	**********************************************************
+	<link rel="stylesheet/less" href="../../assets/less/admin/module.admin.page.layout.section.layout-fixed-menu-top-quick.less" />
+	-->
+	
+		<!--[if lt IE 9]><link rel="stylesheet" href="../../assets/components/library/bootstrap/css/bootstrap.min.css" /><![endif]-->
+	<link rel="stylesheet" href="../../assets/css/admin/module.admin.page.layout.section.layout-fixed-menu-top-quick.min.css" />
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script src="../../assets/components/library/jquery/jquery.min.js?v=v2.1.0"></script>
+<script src="../../assets/components/library/jquery/jquery-migrate.min.js?v=v2.1.0"></script>
+<script src="../../assets/components/library/modernizr/modernizr.js?v=v2.1.0"></script>
+<script src="../../assets/components/plugins/less-js/less.min.js?v=v2.1.0"></script>
+<script src="../../assets/components/modules/admin/charts/flot/assets/lib/excanvas.js?v=v2.1.0"></script>
+<script src="../../assets/components/plugins/browser/ie/ie.prototype.polyfill.js?v=v2.1.0"></script>	
+
+</head>
+<body class="">
+	
+		<!-- Main Container Fluid -->
+	<div class="container-fluid fixed menu-left">
+		
+				
+		<!-- Content -->
+		<div id="content">
+		
+						<!-- Top navbar -->
+			<div class="navbar main">
+				
+				<!-- Menu Toggle Button -->
+				<button type="button" class="btn btn-navbar navbar-toggle pull-left">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- // Menu Toggle Button END -->
+				
+				<!-- Quick Top Style -->
+<ul class="topnav pull-left">
+	<li class="glyphicons user"><a href="../my_account_advanced.html?lang=en"><i></i><span>My Account</span></a></li>
+	<li class="glyphicons history"><a href="../timeline.html?lang=en"><i></i><span>Timeline</span></a></li>
+	<li class="glyphicons picture"><a href="../gallery.html?lang=en"><i></i><span>Photo Gallery</span></a></li>
+	
+		<li class="hidden-xs glyphicons settings active"><a href="?module=admin&amp;page=layout&amp;section=layout-fixed-menu-top-quick&amp;url_rewrite=&amp;build=&amp;v=v2.1.0&amp;layout_type=fluid"><i></i><span>Boxed Layout</span></a></li>
+	<li class="glyphicons align_right"><a href="?module=admin&amp;page=layout&amp;section=layout-fixed-menu-top-quick&amp;url_rewrite=&amp;build=&amp;v=v2.1.0&amp;menu_position=menu-right"><i></i><span>Right Menu</span></a></li>
+		
+</ul>
+<!-- // Quick Top Style END -->
+
+
+				<div class="clearfix"></div>
+				
+			</div>
+			<!-- Top navbar END -->
+
+			
+					
+	<!-- heading -->
+<h4 class="innerAll bg-white margin-none">Layout example</h4>
+<!-- // END heading -->
+
+<!-- content -->
+<div class="innerAll">
+
+	<div class="innerAll bg-white">
+
+		<div class="pull-right">
+			<div class="btn-group">
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+			    	Default <span class="caret"></span>
+			  	</button>
+			  	<ul class="dropdown-menu pull-right text-center dropdown-menu-light" role="menu">
+			    	<li class="innerAll strong"><span>Fluid Layout (Full)</span></li>
+			    	<li><a href="../layout/layout-fluid-menu-all-full.html?lang=en">All menus</a></li>
+
+			    	<li class="innerAll strong"><span>Fluid Layout (Quick)</span></li>
+			    	<li><a href="../layout/layout-fluid-menu-all-quick.html?lang=en">All menus</a></li>
+
+			    	<li class="innerAll strong"><span>Fixed Layout (Full)</span></li>
+			    	<li><a href="../layout/layout-fixed-menu-all-full.html?lang=en">All menus</a></li>
+
+			    	<li class="innerAll strong"><span>Fixed Layout (Quick)</span></li>
+			    	<li><a href="../layout/layout-fixed-menu-all-quick.html?lang=en">All menus</a></li>
+			  	</ul>
+			</div>
+
+			<div class="btn-group">
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+			    	Sidebar + Top <span class="caret"></span>
+			  	</button>
+			  	<ul class="dropdown-menu pull-right text-center dropdown-menu-light" role="menu">
+			  		<li class="innerAll strong"><span>Fluid Layout (Full)</span></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-left-full-top.html?lang=en">Sidebar left &amp; Top menu</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-right-full-top.html?lang=en">Sidebar right &amp; Top menu</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-left-full-top-no-footer.html?lang=en">Sidebar left &amp; Top menu &amp; no footer</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-right-full-top-no-footer.html?lang=en">Sidebar right &amp; Top menu &amp; no footer</a></li>
+
+			    	<li class="innerAll strong"><span>Fluid Layout (Quick)</span></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-left-quick-top.html?lang=en">Sidebar left &amp; Top menu</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-right-quick-top.html?lang=en">Sidebar right &amp; Top menu</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-left-quick-top-no-footer.html?lang=en">Sidebar left &amp; Top menu &amp; no footer</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-right-quick-top-no-footer.html?lang=en">Sidebar right &amp; Top menu &amp; no footer</a></li>
+
+			    	<li class="innerAll strong"><span>Fixed Layout (Full)</span></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-left-full-top.html?lang=en">Sidebar left &amp; Top menu</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-right-full-top.html?lang=en">Sidebar right &amp; Top menu</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-left-full-top-no-footer.html?lang=en">Sidebar left &amp; Top menu &amp; no footer</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-right-full-top-no-footer.html?lang=en">Sidebar right &amp; Top menu &amp; no footer</a></li>
+
+			    	<li class="innerAll strong"><span>Fixed Layout (Quick)</span></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-left-quick-top.html?lang=en">Sidebar left &amp; Top menu</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-right-quick-top.html?lang=en">Sidebar right &amp; Top menu</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-left-quick-top-no-footer.html?lang=en">Sidebar left &amp; Top menu &amp; no footer</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-right-quick-top-no-footer.html?lang=en">Sidebar right &amp; Top menu &amp; no footer</a></li>
+			  	</ul>
+			</div>
+
+			<div class="btn-group">
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+			    	Top <span class="caret"></span>
+			  	</button>
+			  	<ul class="dropdown-menu pull-right text-center dropdown-menu-light" role="menu">
+			  		<li class="innerAll strong"><span>Fluid Layout (Full)</span></li>
+			    	<li><a href="../layout/layout-fluid-menu-top-full.html?lang=en">Top menu</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-top-full-no-footer.html?lang=en">Top menu &amp; no footer</a></li>
+
+			    	<li class="innerAll strong"><span>Fluid Layout (Quick)</span></li>
+			    	<li><a href="../layout/layout-fluid-menu-top-quick.html?lang=en">Top menu</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-top-quick-no-footer.html?lang=en">Top menu &amp; no footer</a></li>
+
+			    	<li class="innerAll strong"><span>Fixed Layout (Full)</span></li>
+			  		<li><a href="../layout/layout-fixed-menu-top-full.html?lang=en">Top menu</a></li>
+			  		<li><a href="../layout/layout-fixed-menu-top-full-no-footer.html?lang=en">Top menu &amp; no footer</a></li>
+
+			  		<li class="innerAll strong"><span>Fixed Layout (Quick)</span></li>
+			  		<li class="active"><a href="../layout/layout-fixed-menu-top-quick.html?lang=en">Top menu</a></li>
+			  		<li><a href="../layout/layout-fixed-menu-top-quick-no-footer.html?lang=en">Top menu &amp; no footer</a></li>
+			  	</ul>
+			</div>
+
+			<div class="btn-group">
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+			    	Sidebar <span class="caret"></span>
+			  	</button>
+			  	<ul class="dropdown-menu pull-right text-center dropdown-menu-light" role="menu">
+
+			    	<li class="innerAll strong"><span>Fluid Layout (Full)</span></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-left-full.html?lang=en">Sidebar left</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-right-full.html?lang=en">Sidebar right</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-left-full-no-footer.html?lang=en">Sidebar left &amp; no footer</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-right-full-no-footer.html?lang=en">Sidebar right &amp; no footer</a></li>
+
+			    	<li class="innerAll strong"><span>Fluid Layout (Quick)</span></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-left-quick.html?lang=en">Sidebar left</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-right-quick.html?lang=en">Sidebar right</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-left-quick-no-footer.html?lang=en">Sidebar left &amp; no footer</a></li>
+			    	<li><a href="../layout/layout-fluid-menu-sidebar-right-quick-no-footer.html?lang=en">Sidebar right &amp; no footer</a></li>
+
+			    	<li class="innerAll strong"><span>Fixed Layout (Full)</span></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-left-full.html?lang=en">Sidebar left</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-right-full.html?lang=en">Sidebar right</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-left-full-no-footer.html?lang=en">Sidebar left &amp; no footer</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-right-full-no-footer.html?lang=en">Sidebar right &amp; no footer</a></li>
+
+			    	<li class="innerAll strong"><span>Fixed Layout (Quick)</span></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-left-quick.html?lang=en">Sidebar left</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-right-quick.html?lang=en">Sidebar right</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-left-quick-no-footer.html?lang=en">Sidebar left &amp; no footer</a></li>
+			    	<li><a href="../layout/layout-fixed-menu-sidebar-right-quick-no-footer.html?lang=en">Sidebar right &amp; no footer</a></li>
+
+			  	</ul>
+			</div>
+		</div>
+
+		<h3 class="margin-none">Content goes here</h3>
+		<div class="separator bottom"></div>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, enim, qui, unde iure rerum nesciunt velit amet maxime rem perferendis doloremque nulla eius pariatur! Molestias, maxime, quas, autem, aliquid minus velit eum nemo doloribus recusandae illo facilis vel sint excepturi iste nostrum necessitatibus sit rem ipsum id odio commodi iure perspiciatis aliquam nam numquam? Nihil, aperiam quos eum libero magnam veritatis. Commodi, ipsum, incidunt deleniti fugit libero ea sit laudantium vel culpa perferendis expedita impedit maiores veritatis doloribus assumenda earum fugiat magni voluptates iusto facilis. Laboriosam, est, dolores, eius quod saepe dolorem deserunt quia quae repellendus unde officia laudantium similique modi assumenda totam dicta asperiores fuga dolore. Amet, eum, impedit. Facilis, veniam, nulla dicta adipisci corporis soluta assumenda consequuntur deleniti animi perspiciatis facere tempore ea voluptatem. Non, nisi nobis tempora nesciunt. Veniam, asperiores, repellendus dolore distinctio possimus enim eos assumenda facilis harum vel pariatur ad modi aspernatur maxime vero tempora.</p>
+		<div class="separator bottom"></div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Content heading</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, architecto, velit explicabo quas impedit quibusdam ab quasi aliquid illum libero blanditiis in laborum exercitationem fugiat dolores et aperiam ratione dignissimos quaerat nostrum delectus doloribus pariatur maiores perferendis ut deleniti odit tenetur excepturi quidem eum magnam hic porro nesciunt possimus non ipsam repellat dicta sint culpa corporis veritatis illo aut autem sequi earum est minus perspiciatis saepe nihil tempore. Facere, delectus reprehenderit excepturi nam praesentium recusandae consequuntur aliquid debitis expedita nemo. Explicabo, provident, voluptas, libero, ex beatae itaque voluptate consectetur nisi nemo maiores ducimus qui placeat cumque a perspiciatis laborum quo tempora aliquid culpa similique reiciendis quidem fugiat accusantium sapiente impedit. Excepturi, minus, minima fugiat ex repellendus fugit odit. Enim, cupiditate, facilis, optio, consequuntur debitis quaerat repellendus natus modi cumque omnis est accusamus tenetur quae nam nesciunt recusandae odio. Amet, facere, impedit ipsa quod obcaecati officia maxime nam totam eaque laudantium esse aut dicta commodi. Dicta, debitis, quisquam, eius saepe odit animi iste eligendi quam ducimus beatae qui explicabo facere nisi dolorem quae optio esse tempore. Laborum, vitae, provident accusantium consectetur natus quas molestias culpa ex sed quibusdam at nam maxime. Eligendi, ullam praesentium assumenda reprehenderit fugiat vel laboriosam recusandae eaque?</p>
+			</div>
+			<div class="col-md-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quisquam error dolor nemo optio aut vitae ducimus soluta fugit reiciendis iure facere repudiandae sapiente quia eligendi ad repellat saepe magni delectus possimus! Est, unde, aliquam, ipsam possimus vero molestias temporibus eaque totam nostrum iusto voluptatibus blanditiis modi assumenda reprehenderit accusantium atque praesentium consequatur nulla animi suscipit? Sit, perspiciatis, eaque, in aliquam cumque et quae at possimus repellendus iure inventore tenetur molestias rem dolores ab nostrum voluptatem enim facere eum aspernatur. Cumque, ad, quibusdam enim esse consectetur laboriosam debitis sapiente molestiae officia voluptatum! Neque, nihil, incidunt qui at placeat aperiam dicta.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, blanditiis, nisi itaque voluptate mollitia modi dolor quisquam labore? Alias, neque, optio debitis maiores eum dignissimos velit distinctio necessitatibus earum excepturi delectus atque sequi rerum molestias dicta officiis veniam veritatis. Rem, error totam quibusdam eligendi sunt magnam sed perferendis harum! Deleniti, iusto quae dolore magnam incidunt. Magni, incidunt, quis, error enim ut debitis cupiditate reprehenderit consequuntur ipsum veritatis unde inventore quisquam est eaque laudantium nemo natus amet dolores dolorum et? Eveniet maxime expedita itaque dolorum beatae reiciendis optio magnam deleniti. Dolorum, laborum earum eligendi cupiditate fuga explicabo nihil exercitationem incidunt.</p>
+			</div>
+		</div>
+		<div class="separator bottom"></div>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, in, vel. Itaque, dolore, facilis, dolor, deserunt inventore ratione corrupti natus aliquam suscipit minima illum commodi fuga laudantium laboriosam unde ipsum ex quas perspiciatis deleniti temporibus architecto assumenda blanditiis beatae modi dignissimos cum quae pariatur alias voluptates maiores. Fugit, corrupti, adipisci, incidunt mollitia enim iure neque vitae porro ab reiciendis doloribus praesentium sunt architecto facilis rem dolores tenetur consequatur voluptates dicta ut impedit excepturi aperiam vero quibusdam similique perspiciatis cum quos dignissimos placeat veritatis distinctio explicabo minima officia eos unde molestias beatae! Repellat, quis minima cum harum dolor at est perspiciatis optio odio architecto. Minus iusto repellendus pariatur voluptas libero voluptatibus molestiae iure nesciunt nemo ipsum! Sit, ipsum provident repudiandae odio.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae maiores quaerat iusto autem quidem alias beatae tenetur iure cumque suscipit. Perspiciatis neque laborum voluptates? Incidunt, alias, totam molestias magnam quo soluta consectetur recusandae veniam distinctio ratione delectus at maiores velit quos eligendi dolore facere. Incidunt, beatae hic provident fugiat totam aliquam minima deleniti cupiditate corporis ipsa! Voluptatibus, quis voluptas blanditiis cupiditate tempora nemo quibusdam molestias in odit a provident natus expedita numquam beatae ad vitae autem fugit pariatur officia quod odio harum saepe maxime deleniti reprehenderit. Corporis ea inventore aspernatur minus eius. Magnam, ex, quos quam iste ducimus dolorum libero ipsam iusto maxime ipsum debitis error nulla quo tempora perferendis distinctio ab reiciendis mollitia cupiditate quasi deserunt minima delectus deleniti quas earum assumenda nihil optio totam vitae laborum! Voluptatibus, quam, maiores, hic nam veritatis nulla dolorum quaerat culpa autem animi doloribus reprehenderit tempore est quis rerum itaque totam cupiditate tempora.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, voluptatibus vero minima maxime eveniet quod corrupti. Velit ut amet tempore cupiditate modi eos ad? Numquam, voluptates, unde, corrupti totam incidunt dolorem facilis omnis voluptate eius rem maxime ipsam ut laboriosam voluptas molestias consequatur blanditiis at eligendi. Placeat, tempore, eaque, nemo fugit odit sit magni a facere deserunt sunt fugiat quaerat consequatur iusto. Laborum, aut unde est id cum impedit itaque totam vero voluptatum nostrum autem architecto omnis fugiat? Eaque, suscipit iure minima quod ullam temporibus saepe nam. Dolor, optio, ratione error nemo nam possimus nisi officia laudantium libero assumenda iusto.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, consequuntur neque labore tempore quae. Aliquam, omnis consectetur recusandae. Cum, iusto eos rem fugit similique dolorum magni pariatur ut magnam quibusdam quasi illum cumque ab nihil distinctio repudiandae animi officiis eligendi tenetur totam iure saepe dignissimos ea voluptatum facilis molestias placeat accusamus vitae debitis harum deserunt dolorem voluptates consequatur deleniti facere alias fuga? Rerum, ipsa inventore quos maxime pariatur earum possimus. Ex, nulla, autem, dolorem laudantium ipsa explicabo praesentium eveniet sint quidem reiciendis recusandae nemo inventore et voluptatum cum illo asperiores dicta omnis repellendus modi! Architecto modi animi necessitatibus inventore maiores.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, mollitia, quas, delectus, deleniti vitae blanditiis commodi laudantium assumenda suscipit facilis corporis omnis consequatur reiciendis dolorum quasi dolore consequuntur ea tempore incidunt enim asperiores. Quas sunt asperiores vel earum quod ea aperiam itaque dolores quos architecto! Eos, temporibus pariatur suscipit necessitatibus deleniti quam maiores? Consectetur, minima, eligendi, sequi, molestiae vero tenetur optio sit excepturi enim quidem eius reprehenderit mollitia impedit sapiente in. Ut, quisquam dignissimos at repudiandae repellat accusantium doloribus a id earum illo. Dignissimos, ducimus, nihil incidunt praesentium expedita vitae aliquam in atque placeat quam amet possimus ut delectus earum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, deleniti, incidunt, ea veritatis quam optio aut magni repudiandae accusantium atque ex quae pariatur reprehenderit tempore commodi deserunt quisquam provident! Facere, at, consequuntur, natus, quas explicabo fugit molestiae perspiciatis in corporis sequi blanditiis voluptas. Unde, quas, harum, autem labore nobis libero alias numquam a minus assumenda nemo asperiores minima neque cum maxime ipsum non eligendi reprehenderit amet sit tempora ducimus reiciendis soluta doloribus esse suscipit doloremque corporis ex quam provident hic nihil explicabo ipsam ipsa possimus molestias perferendis! Ut, provident, quaerat perferendis quidem quod dolor recusandae dolore corrupti ullam doloribus blanditiis.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, autem, cupiditate iure corrupti quo nihil tempora placeat animi quam cum labore dolores vel tenetur blanditiis quibusdam ratione adipisci beatae exercitationem eligendi aut velit amet sit veniam nisi ullam expedita deleniti consequatur minima id sunt soluta corporis ipsam neque. Nostrum, illo, odit! Quidem, totam, id facilis ea distinctio impedit eos placeat possimus aperiam ipsam natus tempora ratione quis voluptates atque maiores explicabo non numquam sapiente sequi vitae in odit doloremque aliquid nam! Inventore, sed, ea, quos debitis nemo perspiciatis aperiam distinctio optio vero ab tempore vitae esse non impedit quibusdam. Recusandae.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nostrum neque aliquam et laborum officiis molestiae deleniti aliquid? Eius, earum, eum, deleniti distinctio aliquam laborum consectetur ullam nulla tempore repellat sequi harum modi iste voluptatum nisi necessitatibus perferendis? Accusamus, iste, accusantium, hic facilis labore magni cumque nobis ea voluptates soluta est voluptatibus sapiente inventore quod asperiores esse exercitationem eveniet aperiam voluptate libero consequatur deserunt assumenda expedita fuga eos. Quaerat, ab, deleniti, accusantium laborum et omnis aspernatur quasi obcaecati voluptates asperiores neque non ullam nam magnam quas beatae harum adipisci totam dolorum perspiciatis laudantium illo excepturi eligendi dicta eius? Dolores, modi, dicta, temporibus delectus vel officiis a aliquam quaerat assumenda aperiam ducimus veritatis nisi error laudantium omnis unde saepe nobis distinctio sapiente tempore esse consequuntur architecto enim voluptatibus quia ad nostrum. Doloremque, officiis, voluptatibus inventore qui molestiae ad ipsa quos dolores neque atque cupiditate optio sit. Officia minus eius laborum aspernatur!</p>
+
+	</div>
+</div>
+<!-- // END content -->
+	
+		
+		</div>
+		<!-- // Content END -->
+		
+				
+				<div id="footer" class="hidden-print">
+			
+			<!--  Copyright Line -->
+			<div class="copy">&copy; 2012 - 2014 - <a href="http://www.mosaicpro.biz">MosaicPro</a> - All Rights Reserved. <a href="http://themeforest.net/item/quick-admin-template/4940725?ref=mosaicpro" target="_blank">Purchase Quick Admin on ThemeForest</a> - Current version: v2.1.0 / <a target="_blank" href="../../assets/../../CHANGELOG.txt">changelog</a></div>
+			<!--  End Copyright Line -->
+	
+		</div>
+		<!-- // Footer END -->
+		
+		
+				
+	</div>
+	<!-- // Main Container Fluid END -->
+	
+
+	<!-- Global -->
+	<script>
+	var basePath = '../',
+		commonPath = '../../assets/',
+		rootPath = '../../',
+		DEV = false,
+		componentsPath = '../../assets/components/';
+	
+	var primaryColor = '#4a8bc2',
+		dangerColor = '#b55151',
+		infoColor = '#74a6d0',
+		successColor = '#609450',
+		warningColor = '#ab7a4b',
+		inverseColor = '#45484d';
+	
+	var themerPrimaryColor = primaryColor;
+	</script>
+	
+	<script src="../../assets/components/library/bootstrap/js/bootstrap.min.js?v=v2.1.0"></script>
+<script src="../../assets/components/plugins/slimscroll/jquery.slimscroll.js?v=v2.1.0"></script>
+<script src="../../assets/components/plugins/breakpoints/breakpoints.js?v=v2.1.0"></script>
+<script src="../../assets/components/core/js/core.init.js?v=v2.1.0"></script>	
+</body>
+</html>
