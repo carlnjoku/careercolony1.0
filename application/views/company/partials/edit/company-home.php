@@ -67,6 +67,13 @@ https://www.youtube.com/watch?v=13yQbaW2V4Y
 
 
 
+<?php //echo $userID; ?>
+
+<form id="new_post298">
+  <input type="text" name="message" class="form-control input-sm" placeholder="Comment here ..." />
+  <input type="button" value="Add Link" onclick="createLink(239);">
+  
+</form>
 
 is this my page
 				
@@ -314,6 +321,8 @@ $("#id").bind('input', function(e) {
 	});
 </script>
 
+
+
 <script>
 		//$(document).delegate("#submit_post", function() {
 		$(document).ready(function(){
@@ -415,19 +424,21 @@ $(document).ready(function() {
 
 					
 
-				$('#load-posts').append('<li><div class="row"><div class="col-md-2"><img width="70" src="<?php echo base_url(); ?>img/mtn.jpg" alt="image" class="img-rounded img-responsive pull-right" /></div><div class="col-md-10"><div class="widget widget-heading-simple widget-body-white"><div class="widget-body padding-none"><div class="innerAll"><div class="muted separator bottom"><div class="pull-right label label-default"> <em>'+currentEntry.post_time+'</em></div><h5 class="strong muted "><i class="fa fa-user "></i> '+currentEntry.companyname+'</h5><span>on <a href="#">'+currentEntry.title+'</a><span></div><span class="">'+currentEntry.postID+', '+currentEntry.description+'</span></div><div class="bg-inverse1"><img src="'+currentEntry.thumbnail_url+'" class="img-responsive" /></div>	<div class="bottom-social border-bottom innerAll half bg-white id="carl"><a href=""><i class="fa fa-comment"></i> Comment</a> <a href=""><i class="fa fa-share"></i> Share Post</a></div><div class="innerAll bg-gray"><ul class="list-group social-comments margin-none"><li class="list-group-item"><img src="<?php echo base_url(); ?>assets/images/avatar-36x36.jpg" alt="Avatar" class="pull-left"><div class="user-info"><div class="row"><div class="col-md-3"><a href="">Adrian Demian</a> <abbr>4 days ago</abbr></div><div class="col-md-9"><span> Wow... nice post</span></div></div></div></li><li class="list-group-item innerAll"><form id="new_post'+currentEntry.postID+'"><input type="text" name="message" class="form-control input-sm" placeholder="Comment here ..." /><input type="submit" value="Submit" /></form></li></ul></div></div></div></div></div></li>');
+				$('#load-posts').append('<li><div class="row"><div class="col-md-2"><img width="70" src="<?php echo base_url(); ?>img/mtn.jpg" alt="image" class="img-rounded img-responsive pull-right" /></div><div class="col-md-10"><div class="widget widget-heading-simple widget-body-white"><div class="widget-body padding-none"><div class="innerAll"><div class="muted separator bottom"><div class="pull-right label label-default"> <em>'+currentEntry.post_time+'</em></div><h5 class="strong muted "><i class="fa fa-user "></i> '+currentEntry.companyname+'</h5><span>on <a href="#">'+currentEntry.title+'</a><span></div><span class="">'+currentEntry.postID+', '+currentEntry.description+'</span></div><div class="bg-inverse1"><img src="'+currentEntry.thumbnail_url+'" class="img-responsive" /></div>	<div class="bottom-social border-bottom innerAll half bg-white id="carl"><a href=""><i class="fa fa-comment"></i> Comment</a> <a href=""><i class="fa fa-share"></i> Share Post</a></div><div class="innerAll bg-gray"><ul class="list-group social-comments margin-none"><li class="list-group-item"><img src="<?php echo base_url(); ?>assets/images/avatar-36x36.jpg" alt="Avatar" class="pull-left"><div class="user-info"><div class="row"><div class="col-md-3"><a href="">Adrian Demian</a> <abbr>4 days ago</abbr></div><div class="col-md-9"><span> Wow... nice post</span></div></div></div></li><li class="list-group-item innerAll"><form id="new_post'+currentEntry.postID+'"><input type="" name="userID" id="userID" value="'+currentEntry.postID+'" /><input type="button" onclick="createLink('+currentEntry.postID+');" value="comment" /></form></li></ul></div></div></div></div></div></li>');
 				
 				
 					
 					var commentForm = document.getElementById("new_post"+currentEntry.postID);
 					var input = document.createElement('input');
 					input.type = 'text';
-					input.setAttribute('name', 'college[]');
+					input.setAttribute('name', 'message');
 					input.setAttribute('class', 'form-control input-sm');
-					input.setAttribute('placeholder','Name of College/University');
+					input.setAttribute('placeholder','Comment here ...');
 					input.setAttribute('required','required');
+
 					
 				    commentForm.appendChild( input );
+					//commentForm.appendChild( inputSubmit );
 
 				
 				//var commentForm = document.getElementById("load-posts").getElementById("new_post");
@@ -501,11 +512,48 @@ $(document).ready(function() {
 
 
 
+
+
+<script>
+function createLink(id) {
+ 	var post_id = id;
+			
+			
+					var frmData1 = $('#new_post'+post_id).serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
+												
+							var data1 = JSON.stringify(frmData1);
+							alert(data1);
+
+							$.ajax({
+								dataType: 'html',
+								type: 'post',
+								url: 'http://localhost/neo4j-moviedb/web/new_post',
+								data: data1,
+								
+							
+								success: function (response) {
+									
+									var responseData = $.parseJSON(response); //parse JSON
+									
+									
+			
+								},
+								error: function (responseData) {
+									
+									//toastr.warning('Personal detail update failed')
+								}
+							});
+						
 				
-<form id="new_post1">
-	<input type="text" name="message" class="form-control input-sm" placeholder="Comment here ..." />
-	<input type="submit" value="Submit" />
-</form>
+				
+		}
+
+</script>
+
+
+
+
+
 <script>
 		//$(document).delegate("#submit_post", function() {
 		$(document).ready(function(){
@@ -551,6 +599,41 @@ $(document).ready(function() {
                     
     	});
 	});
+</script>
+
+
+<script>
+		function comment(id){
+			//var post_id = postID;
+			/*
+			$('#new_post'+post_id).submit(function(e) {
+					var frmData1 = $('#new_post'+post_id).serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
+												
+							var data1 = JSON.stringify(frmData1);
+
+							$.ajax({
+								dataType: 'html',
+								type: 'post',
+								url: 'http://localhost/neo4j-moviedb/web/new_post',
+								data: data1,
+								
+							
+								success: function (response) {
+									
+									var responseData = $.parseJSON(response); //parse JSON
+									
+									
+			
+								},
+								error: function (responseData) {
+									
+									//toastr.warning('Personal detail update failed')
+								}
+							});
+						
+				});
+				*/
+		}
 </script>
 
 
