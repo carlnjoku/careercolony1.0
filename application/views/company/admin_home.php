@@ -83,6 +83,8 @@
 					</div>
 
 				</div>
+
+				
 				<!-- // One Fourth Column END -->
 				
 				
@@ -90,13 +92,13 @@
 		<div class="col-md-4">
 			<div class="widget  padding-none">
 				<div class="widget-body padding-none">
-				<h5 class="innerAll bg-primary text-white margin-bottom-none">List of Companies</h5>
+				<h5 class="innerAll bg-primary text-white margin-bottom-none">List of Companies ----</h5>
 				
 				<ul class="list-group list-group-1 margin-none borders-none" id="companies">
 					
 					
 	
-					<li class="list-group-item border-top-none"><a href="courses_listing.html?lang=en"><span class="badge pull-right bg-primary ">30</span><i class="fa fa-exclamation-circle"></i>&nbsp; Edit Page</a></li>
+					<li class="list-group-item border-top-none"><a href="<?php echo base_url();?>company/create_company"><span class="badge pull-right bg-primary ">30</span><i class="fa fa-exclamation-circle"></i>&nbsp; Create New Company</a></li>
 					
 						
 				</ul>
@@ -117,6 +119,20 @@
 			<!-- // 2 Column Grid / One Fourth & Three Fourth -->
 
 </div>	
+
+<script>
+// Load default company home page
+$(document).ready(function(){
+    
+        var loadUrl = '<?php echo base_url();?>company/admin_home_partials';
+        $("#load-page").load(loadUrl);
+
+		$("#create_page").click(function(){
+        var loadUrl = '<?php echo base_url();?>company/create_company_partials';
+        $("#load-page").load(loadUrl);
+    });
+});
+</script>
 
 
 
@@ -140,7 +156,7 @@
                             }else{
                                 console.log('Call is ok');
 								$.each(responseData, function(index,item) {
-									$("#companies").append('<li><div class="media innerAll"><div class="media-object pull-left thumb"><img src="<?php echo base_url();?>uploads/'+item.logo+'" width="45" alt="Image" /></div><div class="media-body"><span class="strong"><a href="<?php echo base_url();?>company/edit_mode_home/'+item.coyID+' ">'+item.companyname+'</a></span><span class="muted">contact@mosaicpro.biz</span><br><i class="fa fa-envelope"></i><i class="fa fa-phone"></i> <i class="fa fa-skype"></i> </div></div></li>');
+									$("#companies").append('<li><div class="media innerAll"><div class="media-object pull-left thumb"><img src="<?php echo base_url();?>uploads/'+item.logo+'" width="45" alt="Image" /></div><div class="media-body"><span class="strong"><a href="<?php echo base_url();?>company/company_home/'+item.coyID+' ">'+item.companyname+'</a></span><span class="muted">contact@mosaicpro.biz</span><br><i class="fa fa-envelope"></i><i class="fa fa-phone"></i> <i class="fa fa-skype"></i> </div></div></li>');
 								})
                             }
                            
@@ -162,3 +178,33 @@
         
         </script>
 
+		<script>
+ // Submit forms without validation
+    $("#create_company").submit(function(e) {
+        var frmData1 = $('#create_company').serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
+                                        
+                    var data1 = JSON.stringify(frmData1);
+                    
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'post',
+                        url: 'http://localhost/neo4j-alarinna/web/edit_aboutme2',
+                        data: data1,
+                       
+                        
+                        success: function (responseData) {
+                            
+                            
+    
+                        },
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personal detail update failed')
+                        }
+                    });
+                    
+                 
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+                    
+    });
+</script>

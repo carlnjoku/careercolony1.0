@@ -222,8 +222,6 @@
                 </ul>
                                            
                        
-                       
-                       
                     <div class="clearfix"></div>
                    
                 </div>
@@ -268,7 +266,7 @@
                     <ul class="dropdown-menu pull-left">
                         <li><a href="<?php echo base_url(); ?>company/chk_if_exists" class="glyphicons search text-small"><i></i> Companies</a></li>
                         <li><a href="<?php echo base_url(); ?>index.php/myjobs/saved_jobs" class="glyphicons floppy_disk text-small"><i></i> Investment</a></li>
-                        <li><a href="<?php echo base_url(); ?>index.php/myjobs/job_alert" class="glyphicons alarm text-small"><i></i>Group</a></li>
+                        <li><a href="<?php echo base_url(); ?>index.php/myjobs/job_alert" class="glyphicons alarm text-small"><i></i>Colony / Group</a></li>
                         <li><a href="<?php echo base_url(); ?>project/home" class="glyphicons display text-small"><i></i>Projects</a></li>
                         
                     </ul>
